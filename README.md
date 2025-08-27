@@ -40,5 +40,14 @@ Simply run the command without any arguments:
 ```
 foldchangeviz
 ```
+Browse for your CSV file
+
+Enter template wells (space-separated)
+
+Enter background and target m/z values
+
+Set intensity tolerance (default 10000)
+
+Click Generate Heatmap and save as PNG
 
 
