@@ -25,12 +25,13 @@ cd foldchangeviz
 
 2. Install in editable mode with pip:
 
-```bash
+```
 pip install -e .
+```
 
 ---
 
-### Usage
+## Usage
 
-### GUI Mode 
+## GUI Mode 
 
