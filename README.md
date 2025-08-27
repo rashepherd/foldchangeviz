@@ -40,15 +40,15 @@ Simply run the command without any arguments:
 ```
 foldchangeviz
 ```
-Browse for your CSV file
+- Browse for your CSV file
 
-Enter template wells (space-separated)
+- Enter template wells (space-separated)
 
-Enter background and target m/z values
+- Enter background and target m/z values
 
-Set intensity tolerance (default 10000)
+- Set intensity tolerance (default 10000)
 
-Click Generate Heatmap and save as PNG
+- Click Generate Heatmap and save as PNG
 
 **Command Line**
 
@@ -62,15 +62,15 @@ foldchangeviz --csv data.csv --wells A1 B1 --mz1 212.089 --mz2 212.0891 --tolera
 ```
 Inputs: 
 
---csv: Path to the input CSV file
+- --csv: Path to the input CSV file
 
---wells: List of template wells to calculate fold change
+- --wells: List of template wells to calculate fold change
 
---mz1: Background m/z (numeric only)
+- --mz1: Background m/z (numeric only)
 
---mz2: Target m/z (numeric only)
+- --mz2: Target m/z (numeric only)
 
---tolerance: Intensity threshold for black mask (default: 10000)
+- --tolerance: Intensity threshold for black mask (default: 10000)
 
---save: Optional output PNG file path. If omitted, the plot will display instead of saving
+- --save: Optional output PNG file path. If omitted, the plot will display instead of saving
 
