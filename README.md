@@ -27,3 +27,10 @@ cd foldchangeviz
 
 ```bash
 pip install -e .
+
+---
+
+### Usage
+
+### GUI Mode 
+
