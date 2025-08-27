@@ -34,6 +34,7 @@ pip install -e .
 ## Usage
 
 **GUI Mode**
+
 Simply run the command without any arguments:
 
 ```
