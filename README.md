@@ -1,4 +1,4 @@
-# FoldChangeViz
+# foldchangeviz
 
 **foldchangeviz** is a Python package and command-line tool for visualizing fold change heatmaps from screening data. It provides both a **GUI** for interactive use and a **CLI** for scripting and automation.
 
@@ -18,9 +18,10 @@
 
 1. Clone the repository:
 
-```bash
+```
 git clone https://github.com/rashepherd/foldchangeviz.git
 cd foldchangeviz
+```
 
 2. Install in editable mode with pip:
 
