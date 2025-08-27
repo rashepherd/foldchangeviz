@@ -50,4 +50,27 @@ Set intensity tolerance (default 10000)
 
 Click Generate Heatmap and save as PNG
 
+**Command Line**
+
+```
+foldchangeviz --csv <path_to_csv> --wells <well1> <well2> ... --mz1 <background_mz> --mz2 <target_mz> [--tolerance <value>] [--save <output_file.png>]
+```
+Example Usage:
+
+```
+foldchangeviz --csv data.csv --wells A1 B1 --mz1 212.089 --mz2 212.0891 --tolerance 10000 --save output.png
+```
+Inputs: 
+
+--csv: Path to the input CSV file
+
+--wells: List of template wells to calculate fold change
+
+--mz1: Background m/z (numeric only)
+
+--mz2: Target m/z (numeric only)
+
+--tolerance: Intensity threshold for black mask (default: 10000)
+
+--save: Optional output PNG file path. If omitted, the plot will display instead of saving
 
