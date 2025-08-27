@@ -44,6 +44,9 @@ Simply run the command without any arguments:
 
 ```
 foldchangeviz
+
+It should look like this in the command prompt (click enter to start the GUI):
+C:\Users\[your name]>foldchangeviz
 ```
 - Browse for your CSV file
 
