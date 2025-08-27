@@ -16,14 +16,19 @@
 
 ## Installation
 
-1. Clone the repository:
+1. Open a Command Prompt or powershell terminal. You should see something like this:
+```
+C:\Users\[your name]>
+``` 
+
+3. Clone the repository by copying and pasting this after the "C:\Users\[your name]>" in the command prompt:
 
 ```
 git clone https://github.com/rashepherd/foldchangeviz.git
 cd foldchangeviz
 ```
 
-2. Install in editable mode with pip:
+3. Install in editable mode with pip:
 
 ```
 pip install -e .
