@@ -28,7 +28,7 @@ git clone https://github.com/rashepherd/foldchangeviz.git
 cd foldchangeviz
 ```
 
-3. Install in editable mode with pip:
+3. Install in editable mode with pip (copy and paste this into the command prompt after cloning is complete):
 
 ```
 pip install -e .
