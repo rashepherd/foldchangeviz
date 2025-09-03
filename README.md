@@ -28,7 +28,18 @@ git clone https://github.com/rashepherd/foldchangeviz.git
 cd foldchangeviz
 ```
 
-3. Install in editable mode with pip (copy and paste this into the command prompt after cloning is complete):
+4. Create a Python virtual environment:
+
+```
+pyhton -m venv venv
+```
+
+5. Activate the virtual environment:
+
+```
+venv\Script\activate
+```
+6. Install in editable mode with pip (copy and paste this into the command prompt after cloning is complete):
 
 ```
 pip install -e .
