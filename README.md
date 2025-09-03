@@ -44,6 +44,8 @@ venv\Scripts\activate
 ```
 pip install -e .
 ```
+The visualization should appear as shown:
+<img width="610" height="196" alt="image" src="https://github.com/user-attachments/assets/1c52526a-d3c9-45d3-94b4-0def11a2679d" />
 
 ---
 
