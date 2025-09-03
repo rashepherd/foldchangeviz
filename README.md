@@ -59,7 +59,7 @@ foldchangeviz
 It should look like this in the command prompt (click enter to start the GUI):
 
 ```
-C:\Users\[your name]>foldchangeviz
+C:\Users\[your name]\[path to foldchangeviz directory]>foldchangeviz
 ```
 
 The GUI should appear as shown:
