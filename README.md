@@ -37,7 +37,7 @@ pyhton -m venv venv
 5. Activate the virtual environment:
 
 ```
-venv\Script\activate
+venv\Scripts\activate
 ```
 6. Install in editable mode with pip (copy and paste this into the command prompt after cloning is complete):
 
