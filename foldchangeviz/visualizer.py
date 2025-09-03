@@ -29,17 +29,20 @@ def visualize_fold_change(csv, wells, mz1, mz2, tolerance=10000, save=None):
     x, y = heatmap_data.columns, heatmap_data.index
     X, Y = np.meshgrid(x, y)
     x_flat, y_flat, z_flat = X.flatten(), Y.flatten(), heatmap_data.values.flatten()
-    scatter = plt.scatter(x_flat, y_flat, s=600, c=z_flat, cmap=plt.cm.Blues, alpha=0.6, edgecolors='w', linewidth=1, vmin=0, vmax=heatmap_data.max().max())
+    scatter = plt.scatter(x_flat, y_flat, s=600, c=z_flat, cmap=plt.cm.Blues, alpha=0.6,
+                          edgecolors='w', linewidth=1, vmin=0, vmax=heatmap_data.max().max())
 
     row_idx_map = {label: i for i, label in enumerate(heatmap_data.index)}
     col_idx_map = {label: i for i, label in enumerate(heatmap_data.columns)}
 
+    # Black overlay for low total area
     for idx, val in enumerate(z_flat):
         row, col = y_flat[idx], int(x_flat[idx])
         ri, ci = row_idx_map[row], col_idx_map[col]
         if mask_black.iat[ri, ci]:
             plt.scatter(x_flat[idx], y_flat[idx], s=600, c='black', edgecolors='w', linewidth=1, alpha=0.9)
 
+    # Mark within ±3SD and print values
     for idx, val in enumerate(z_flat):
         row, col = y_flat[idx], int(x_flat[idx])
         ri, ci = row_idx_map[row], col_idx_map[col]
@@ -48,8 +51,15 @@ def visualize_fold_change(csv, wells, mz1, mz2, tolerance=10000, save=None):
         if not np.isnan(val):
             plt.text(x_flat[idx], row_idx_map[row] - 0.52, f'{val:.2f}', color='black', fontsize=10, ha='center')
 
-    plt.text(0.5, 1.02, f'Average Template Fold Change: {avg_fc:.2f}', fontsize=10, ha='center', transform=plt.gca().transAxes)
-    plt.text(0.5, 1.07, f'Standard Deviation of Template Fold Change: {std_fc:.2f}', fontsize=10, ha='center', transform=plt.gca().transAxes)
+    # Outline template wells with red circles
+    template_df = df[df['Well ID'].isin(wells)]
+    for _, r in template_df.iterrows():
+        plt.scatter(r['column'], r['row'], s=600, facecolors='none', edgecolors='red', linewidth=2)
+
+    plt.text(0.5, 1.02, f'Average Template Fold Change: {avg_fc:.2f}', fontsize=10,
+             ha='center', transform=plt.gca().transAxes)
+    plt.text(0.5, 1.07, f'Standard Deviation of Template Fold Change: {std_fc:.2f}', fontsize=10,
+             ha='center', transform=plt.gca().transAxes)
     plt.xlabel('Column')
     plt.ylabel('Row')
     plt.grid(False)
